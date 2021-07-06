@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: dartserver
-          image: lufemunhoz/first-test-k8s:v1
+          image: lufemunhoz/first-test-k8s:latest
           ports:
             - containerPort: 8080
           resources:
