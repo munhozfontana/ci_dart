@@ -1,0 +1,56 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.187.0/containers/dart
+{
+	"name": "Dart",
+	"build": {
+		"dockerfile": "Dockerfile",
+		// Update VARIANT to pick a Dart version
+		"args": {
+			"VARIANT": "2"
+		}
+	},
+	// Set *default* container specific settings.json values on container create.
+	"settings": {},
+	// Add the IDs of extensions you want installed when the container is created.
+	"extensions": [
+		"dart-code.dart-code",
+		"mindaro.mindaro",
+		"nash.awesome-flutter-snippets",
+		"coenraads.bracket-pair-colorizer-2",
+		"ryanluker.vscode-coverage-gutters",
+		"bendixma.dart-data-class-generator",
+		"luanpotter.dart-import",
+		"ms-azuretools.vscode-docker",
+		"usernamehw.errorlens",
+		"dart-code.flutter",
+		"peterhdd.dartgettersetter",
+		"davidwoo.flutter-auto-import",
+		"evan-buss.font-switcher",
+		"get-snippets.get-snippets",
+		"mhutchie.git-graph",
+		"github.copilot",
+		"github.vscode-pull-request-github",
+		"eamodio.gitlens",
+		"mwpb.java-prettier-formatter",
+		"fwcd.kotlin",
+		"ms-kubernetes-tools.vscode-kubernetes-tools",
+		"pkief.material-icon-theme",
+		"ms-ceintl.vscode-language-pack-pt-br",
+		"esbenp.prettier-vscode",
+		"jeroen-meijer.pubspec-assist",
+		"ms-vscode-remote.remote-containers",
+		"ms-vscode-remote.remote-wsl",
+		"visualstudioexptteam.vscodeintellicode",
+		"redhat.vscode-yaml",
+		"ansenhuang.vscode-view-readme",
+		"albert.tabout",
+		"localizely.flutter-intl",
+		"alexisvt.flutter-snippets"
+	],
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	// "forwardPorts": [],
+	// Use 'postCreateCommand' to run commands after the container is created.
+	// "postCreateCommand": "uname -a",
+	// Comment out connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
+	"remoteUser": "vscode"
+}

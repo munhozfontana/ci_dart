@@ -5,6 +5,8 @@ on:
 
 jobs:
   build:
+    env:
+      REPOSITORY: first-test-k8s
     runs-on: ubuntu-latest
 
     steps:
@@ -14,7 +16,7 @@ jobs:
         id: docker_meta
         uses: crazy-max/ghaction-docker-meta@v1
         with:
-          images: lufemunhoz/first-test-k8s
+          images: ${{ secrets.DOCKERHUB_USERNAME }}/${{ first-test-k8s }}
           tag-sha: true
 
       - name: QEMU
@@ -43,5 +45,5 @@ jobs:
           context: .
           file: ./Dockerfile
           platforms: linux/amd64, linux/arm64, linux/386
-          tags: lufemunhoz/first-test-k8s:${{steps.tag_version.outputs.new_tag}}
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/${{ first-test-k8s }}:${{steps.tag_version.outputs.new_tag}}
           labels: ${{  steps.docker_meta.outputs.labels }}
